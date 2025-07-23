@@ -1,89 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid Layout</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        img{
-            height: 100%;
-            width: 100%;
-        }
-        .picture-college{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        h1{
-            text-align: center;
-            font-size: 4rem;
-            margin: 10px 0;
-        }
-        .box{
-            height: 500px;
-            /* width: 100%; */
-            /* border: 2px solid green; */
-            display: flex;
-            gap: 10px;
-        }
-        .box div{
-            flex: 1;
-        }
-        .vertical-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .vertical-container img{
-            height: calc((100% - 10px)/2);
-        }
-        .horizontal-container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .picture-college {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin: 10px 0;
+      }
+      .box {
+        height: 500px;
+        /* width: 100%; */
+        /* border: 2px solid green; */
+        display: flex;
+        gap: 10px;
+      }
+      .box div {
+        flex: 1;
+      }
+      .vertical-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .vertical-container img {
+        height: calc((100% - 10px) / 2);
+      }
+      .horizontal-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+
+      /* responsive media query */
+      @media screen and (max-width: 576px) {
+        .box {
+        flex-direction: column;
+        height: auto;
+      }
+      .horizontal-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      }
+
+      /* medium device */
+      @media screen and (min-width: 576px) and (max-width: 992px) {
+        .box {
+        flex-direction: column;
+        height: auto;
+      }
+      }
+
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Picture College</h1>
     <section class="picture-college">
-        <div class="box box-1">
-            <img src="./images/A.jpg" alt="">
+      <div class="box box-1">
+        <img src="./images/A.jpg" alt="" />
+      </div>
+      <div class="box box-2">
+        <div>
+          <img src="./images/B.jpg" alt="" />
         </div>
-        <div class="box box-2">
 
-            <div>
-                <img src="./images/B.jpg" alt="">
-            </div>
-
-            <div>
-                <img src="./images/c.jpg" alt="">
-            </div>
-
-            <div class="vertical-container">
-                <img src="./images/d.jpg" alt="">
-            <img src="./images/e.jpg" alt="">
-            </div>
-
+        <div>
+          <img src="./images/c.jpg" alt="" />
         </div>
-        <div class="box box-3">
-            <div>
-                <img src="./images/F.jpg" alt="">
-            </div>
-            <div class="horizontal-container">
-                <img src="./images/g.jpg" alt="">
-                <img src="./images/g.jpg" alt="">
-                <img src="./images/g.jpg" alt="">
-                <img src="./images/g.jpg" alt="">
-            </div>
-            <div>
-                <img src="./images/h.jpg" alt="">
-            </div>
+
+        <div class="vertical-container">
+          <img src="./images/d.jpg" alt="" />
+          <img src="./images/e.jpg" alt="" />
         </div>
+      </div>
+      <div class="box box-3">
+        <div>
+          <img src="./images/F.jpg" alt="" />
+        </div>
+        <div class="horizontal-container">
+          <img src="./images/g.jpg" alt="" />
+          <img src="./images/g.jpg" alt="" />
+          <img src="./images/g.jpg" alt="" />
+          <img src="./images/g.jpg" alt="" />
+        </div>
+        <div>
+          <img src="./images/h.jpg" alt="" />
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
