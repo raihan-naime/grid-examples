@@ -9,6 +9,10 @@
             margin: 0;
             padding: 0;
         }
+        img{
+            height: 100%;
+            width: 100%;
+        }
         .picture-college{
             display: flex;
             flex-direction: column;
@@ -26,17 +30,16 @@
             display: flex;
             gap: 10px;
         }
-        .box img{
-            height: 100%;
-            width: 100%;
+        .box div{
+            flex: 1;
         }
-        .vertical-container{
-            height: calc(100% - 10px) / 2;
-            /* width: 100%; */
+        .vertical-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            
+        }
+        .vertical-container img{
+            height: calc((100% - 10px)/2);
         }
         .horizontal-container{
             display: grid;
@@ -53,23 +56,33 @@
         </div>
         <div class="box box-2">
 
-            <img src="./images/B.jpg" alt="">
-            <img src="./images/c.jpg" alt="">
+            <div>
+                <img src="./images/B.jpg" alt="">
+            </div>
+
+            <div>
+                <img src="./images/c.jpg" alt="">
+            </div>
+
             <div class="vertical-container">
                 <img src="./images/d.jpg" alt="">
             <img src="./images/e.jpg" alt="">
             </div>
 
         </div>
-        <div class="box">
-            <img src="./images/F.jpg" alt="">
+        <div class="box box-3">
+            <div>
+                <img src="./images/F.jpg" alt="">
+            </div>
             <div class="horizontal-container">
                 <img src="./images/g.jpg" alt="">
                 <img src="./images/g.jpg" alt="">
                 <img src="./images/g.jpg" alt="">
                 <img src="./images/g.jpg" alt="">
             </div>
-            <img src="./images/h.jpg" alt="">
+            <div>
+                <img src="./images/h.jpg" alt="">
+            </div>
         </div>
     </section>
 </body>
