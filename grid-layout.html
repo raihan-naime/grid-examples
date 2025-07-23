@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .picture-college{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        h1{
+            text-align: center;
+            font-size: 4rem;
+            margin: 10px 0;
+        }
+        .box{
+            height: 500px;
+            /* width: 100%; */
+            /* border: 2px solid green; */
+            display: flex;
+            gap: 10px;
+        }
+        .box img{
+            height: 100%;
+            width: 100%;
+        }
+        .vertical-container{
+            height: calc(100% - 10px) / 2;
+            /* width: 100%; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+        .horizontal-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Picture College</h1>
+    <section class="picture-college">
+        <div class="box box-1">
+            <img src="./images/A.jpg" alt="">
+        </div>
+        <div class="box box-2">
+
+            <img src="./images/B.jpg" alt="">
+            <img src="./images/c.jpg" alt="">
+            <div class="vertical-container">
+                <img src="./images/d.jpg" alt="">
+            <img src="./images/e.jpg" alt="">
+            </div>
+
+        </div>
+        <div class="box">
+            <img src="./images/F.jpg" alt="">
+            <div class="horizontal-container">
+                <img src="./images/g.jpg" alt="">
+                <img src="./images/g.jpg" alt="">
+                <img src="./images/g.jpg" alt="">
+                <img src="./images/g.jpg" alt="">
+            </div>
+            <img src="./images/h.jpg" alt="">
+        </div>
+    </section>
 </body>
 </html>
